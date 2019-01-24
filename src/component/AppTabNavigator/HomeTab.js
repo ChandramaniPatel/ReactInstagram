@@ -1,5 +1,5 @@
 
-import { Container, Content, Icon ,Thumbnail} from 'native-base';
+import { Container, Content, Icon ,Thumbnail ,Header,Left,Body,Right} from 'native-base';
 import React, { Component } from 'react';
 import {View ,Text} from "react-native";
 import CardComponent from '../CardComponent';
@@ -14,43 +14,57 @@ export default class HomeTab extends Component {
     }
 
   render() {
-    // return (
-    //     <View style={{backgroundColor : 'green',flex : 1}}>
-    //     <Text>HomeTab</Text>
-    //   </View>
-    // )
-
     return(
         <Container>
+           {/* setting header view  */}
+            <Header>
+                <Left><Icon name="ios-camera"  style={{color: "magenta",paddingLeft:10}}/></Left>
+                <Body><Text>Instagram</Text></Body>
+                <Right><Icon name="ios-send"  style={{color: "magenta",paddingRight:10}}/></Right>
+            </Header>
           <Content> 
               <View style={{height : 100}}> 
-                 <View style={{flex: 1, flexDirection : 'row',justifyContent:'space-between',alignItems: 'center',paddingHorizontal: 7, }}>
-                 <Text>Stories</Text>
-                  <Text>Watch All</Text>
+                 <View style={{flex: 1, flexDirection : 'row',justifyContent:'space-between',alignItems: 'center',paddingHorizontal: 10, }}>
+                 <Text style={{fontWeight: 'bold'}}>Stories</Text>
+                    <View style={{flexDirection : 'row', alignItems : 'center'}}>
+                    <Icon name="md-play" style = {{fontSize : 14}}/>
+                       <Text style={{fontWeight: 'bold'}}> Watch All</Text>
+                    </View>
                  </View>
                  <View style={{flex:3}}>
-                 <ScrollView horizontal = {true} showsHorizontalScrollIndicator = {false}>
-                     <Thumbnail source={{marginHorizontal: '5',borderColor: 'pink',borderWidth: 2,}}
+                 <ScrollView 
+                     horizontal = {true} 
+                     showsHorizontalScrollIndicator = {false}
+                     contentContainerStyle={
+                         {
+                             alignItems : "center",
+                             paddingStart : 5,
+                             paddingEnd : 5
+                         }
+                     }
+
+                 >
+                     <Thumbnail style={{marginHorizontal: 5,borderColor: 'magenta',borderWidth: 2,}}
                      source= {require("../../assets/ProfilePics/P1.jpg")} />
-                     <Thumbnail source={{marginHorizontal: '5',borderColor: 'pink',borderWidth: 2,}}
+                     <Thumbnail style={{marginHorizontal: 5,borderColor: 'magenta',borderWidth: 2,}}
                      source= {require("../../assets/ProfilePics/P2.jpg")} />
-                     <Thumbnail source={{marginHorizontal: '5',borderColor: 'pink',borderWidth: 2,}}
+                     <Thumbnail style={{marginHorizontal: 5,borderColor: 'magenta',borderWidth: 2,}}
                      source= {require("../../assets/ProfilePics/P3.jpg")} />
-                     <Thumbnail source={{marginHorizontal: '5',borderColor: 'pink',borderWidth: 2,}}
+                     <Thumbnail style={{marginHorizontal: 5,borderColor: 'magenta',borderWidth: 2,}}
                      source= {require("../../assets/ProfilePics/P4.jpg")} />
-                     <Thumbnail source={{marginHorizontal: '5',borderColor: 'pink',borderWidth: 2,}}
-                     source= {require("../../assets/ProfilePics/P5.jpg")} />
-                     <Thumbnail source={{marginHorizontal: '5',borderColor: 'pink',borderWidth: 2,}}
+                     <Thumbnail style={{marginHorizontal: 5,borderColor: 'magenta',borderWidth: 2,}}
+                     source= {require("../../assets/ProfilePics/P5.png")} />
+                     <Thumbnail style={{marginHorizontal: 5,borderColor: 'magenta',borderWidth: 2,}}
                      source= {require("../../assets/ProfilePics/P6.jpg")} />
-                     <Thumbnail source={{marginHorizontal: '5',borderColor: 'pink',borderWidth: 2,}}
+                     <Thumbnail style={{marginHorizontal: 5,borderColor: 'magenta',borderWidth: 2,}}
                      source= {require("../../assets/ProfilePics/P7.jpg")} />
-                     <Thumbnail source={{marginHorizontal: '5',borderColor: 'pink',borderWidth: 2,}}
+                     <Thumbnail style={{marginHorizontal: 5,borderColor: 'magenta',borderWidth: 2,}}
                      source= {require("../../assets/ProfilePics/P8.jpg")} />
-                     <Thumbnail source={{marginHorizontal: '5',borderColor: 'pink',borderWidth: 2,}}
+                     <Thumbnail style={{marginHorizontal: 5,borderColor: 'magenta',borderWidth: 2,}}
                      source= {require("../../assets/ProfilePics/P9.jpg")} />
-                     <Thumbnail source={{marginHorizontal: '5',borderColor: 'pink',borderWidth: 2,}}
+                     <Thumbnail style={{marginHorizontal: 5,borderColor: 'magenta',borderWidth: 2,}}
                      source= {require("../../assets/ProfilePics/P10.jpg")} />
-                     <Thumbnail source={{marginHorizontal: '5',borderColor: 'pink',borderWidth: 2,}}
+                     <Thumbnail style={{marginHorizontal: 5,borderColor: 'magenta',borderWidth: 2,}}
                      source= {require("../../assets/ProfilePics/P11.jpg")} />
                  </ScrollView>
  

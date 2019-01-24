@@ -20,29 +20,30 @@ export default class CardComponent extends Component {
     }
 
     return (
-      <Card>
+      <Card style ={{borderColor: "magenta"}}>
           <CardItem>
               <Left>
-                  <Thumbnail source={require("../assets/profile.jpg")}/>
+                  <Thumbnail style={{borderColor: 'magenta',borderWidth: 2,}}
+                  source={require("../assets/profile.jpg")}/>
                 <Body>
                     <Text>Chandra</Text>
                     <Text note>Jan 22,2019 </Text>
                 </Body>
               </Left>
           </CardItem>
-          <CardItem cardBody>
+          <CardItem   cardBody>
           <Image source = {images[this.props.imageSource]} style={ {height :200,width:null,flex : 1 }}/>
           </CardItem>
           <CardItem style={{height : 45}}>
               <Left>
                   <Button transparent>
-                  <Icon name="ios-heart" style={{color: "black"}}/>
+                  <Icon name="ios-heart" style={{color: "magenta"}}/>
                   </Button>
                   <Button transparent>
-                  <Icon name="ios-chatbubbles" style={{color: "black"}}/>
+                  <Icon name="ios-chatbubbles" style={{color: "magenta"}}/>
                   </Button>
                   <Button transparent>
-                  <Icon name="ios-send" style={{color: "black"}}/>
+                  <Icon name="ios-send" style={{color: "magenta"}}/>
                   </Button>
               </Left>
           </CardItem>

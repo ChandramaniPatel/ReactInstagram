@@ -20,9 +20,14 @@ import TabNavigator from './TabNavigator';
  class MainScreen extends Component {
      
   static navigationOptions = {
-        headerLeft : <Icon name="ios-camera" style={ {paddingLeft:10} } />,
-        title:"Instagram", 
-        headerRight: <Icon name="ios-send" style={ {paddingRight:10} } />,
+        // We want differnt herade for different tab So commenting below code and making header=nil
+
+        // headerLeft : <Icon name="ios-camera" style={ {color: "magenta" , paddingLeft:10} } />,
+        // title:"Instagram", 
+        // headerRight: <Icon name="ios-send" style={ {color: "magenta" , paddingRight:10} } />,
+
+        header : null
+
     } 
     render() {
         const {navigate} = this.props.navigation;
